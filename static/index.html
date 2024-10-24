@@ -1,0 +1,116 @@
+<!-- Component library for Quick Write (/static/index.html) -->
+
+<!-- Mode Switch -->
+<Component name="ModeSwitch">
+    <Template
+    -src="./components/ModeSwitch/mode-switch.html"
+    ></Template>
+    <State
+        -store="Mode"
+            writemode:=false>
+    </State>
+    <Script
+        -src="./components/ModeSwitch/ModeSwitch.js">
+    </Script>
+    <Style
+        -src="./components/ModeSwitch/mode-switch.css">
+    </Style>
+</Component>
+
+<!-- Draft Area -->
+<Component name="DraftArea">
+    <Template
+        -src="./components/DraftArea/draft-area.html"
+    ></Template>
+    <State
+        -store="Draft"
+				quickwrite=""
+				count:=0
+				active:=false
+				visible:=true
+    ></State>
+    <Script
+        -src="./components/DraftArea/DraftArea.js">
+    </Script>
+    <Style
+        -src="./components/DraftArea/draft-area.css"
+    ></Style>
+</Component>
+
+<!-- Daily Read -->
+<Component name="DailyRead">
+    <Template
+        -src="./components/DailyRead/daily-read.html">
+    </Template>
+    <State
+        -store="DailyRead"
+            vid="BnH1vfIZx6c"
+            title="city scat"
+            author="devorah major"
+            bio_url="https://www.devorahmajor.com/?page_id=4"
+            visible:=false
+    ></State>
+    <Style
+        -src="./components/DailyRead/daily-read.css"
+    ></Style>
+    <Script
+        -src="./components/DailyRead/DailyRead.js"
+    ></Script>
+</Component>
+
+<!-- PromptArea Component -->
+		
+<Component name="PromptArea">
+    <Template
+        -src="./components/PromptArea/prompt-area.html">
+    </Template>
+    <State
+        -store="Prompts"
+            phrase="When was the last time you cried?"
+            image="./img/placeholer.jpg"
+            visible:=true
+    ></State>
+    <Script
+        -src="./components/PromptArea/PromptArea.js">     
+    </Script>
+    <Style
+        -src="./components/PromptArea/prompt-area.css">
+    </Style>
+</Component>
+
+<!-- Drip Words -->
+<Component name="DripStation">
+    <Template
+        -src="./components/DripStation/drip-station.html">
+    </Template>
+    <State
+        -store="DripStation"
+            word1=""
+            word2=""
+            word3=""
+            word4=""
+            word5=""
+            timer="06:00"
+            paused:=false
+            visible:=true
+    ></State>
+    <Script 
+        -src="./components/DripStation/DripStation.js"
+    ></Script>
+    <Style
+        -src="./components/DripStation/drip-station.css">
+    </Style>
+</Component>
+
+<!-- Draft Controls -->
+<Component name="DraftControls">
+    <Template
+        -src="./components/DraftControls/draft-controls.html">
+    </Template>
+    <Style
+        -src="./components/DraftControls/draft-controls.css">
+    </Style>
+    <Script
+        -src="./components/DraftControls/DraftControls.js">
+    </Script>
+</Component>

@@ -1,0 +1,25 @@
+.draft-area {
+    display: flex;
+    width: 100%;  /* Allow textarea to fill available space */
+    flex-direction: column;
+    gap: 10px;
+}
+
+#draftAreaContainer {
+    display: flex;
+    flex: 1;
+    padding: 15px;
+    resize: vertical;
+    font-size: 16px;
+    min-height: 300px;
+}
+
+.word-count {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc; /* Slightly lighter text */
+    position: relative;  
+    right: 0;  
+    bottom: 0;
+}

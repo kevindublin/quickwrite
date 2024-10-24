@@ -1,0 +1,168 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Main Page and Canvas */
+
+body {
+    background-color: #121212; /* Near black background */
+    color: #f5f5f5; /* Near white text */
+    font-family: 'Courier New', Courier, monospace; /* Simple font */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header, main, footer {
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #444; /* Subtle border */
+}
+
+main {
+    display: flex;
+    flex: 1; /* Allow main to take up available space */
+    gap: 20px;
+}
+
+.left-column {
+    flex: 1; /* Allow left column to grow */
+    display: flex;
+    flex-direction: column;
+}
+
+.right-column {
+    width: 400px; /* Adjust as needed */
+    row-gap: 10px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+    row-gap: 10px;
+    border-top: 2px solid #444; /* Subtle border */
+    flex-direction: column;
+}
+
+/* Mode Switch Component */
+
+.is-active, .timer-button {
+    background-color: #007bff; /* Bright accent color */
+    color: #f5f5f5;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.read-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Draft Area Component */
+
+.draft-area {
+    display: flex;
+    width: 100%;  /* Allow textarea to fill available space */
+    flex-direction: column;
+    gap: 10px;
+}
+
+#draftAreaContainer {
+    flex: 1; /* Allow textarea to fill available space */
+    padding: 15px;
+    border: 2px solid #444;
+    resize: vertical;
+    font-size: 16px;
+}
+
+.word-count {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc; /* Slightly lighter text */
+    position: relative;  
+    right: 0;  
+    bottom: 0;
+}
+
+/* Prompt Area Component */
+
+.prompt-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#question-prompt {
+    font-size: 18px;
+    margin: 0;
+}
+
+.image-container {
+    position: relative; /* To position the refresh button */
+    margin-bottom: 10px;
+}
+
+#inspiring-image {
+    width: 100%;
+    height: auto;
+    border: 2px solid #444;
+}
+
+.prompt-button {
+    position: absolute;
+    top: 10px;
+    right: 60px;
+}
+
+/* Word Drip Component */
+
+.drip-words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.drip-style {
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.timer {
+    font-size: 20px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .right-column {
+        width: 100%;
+    }
+}

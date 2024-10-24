@@ -1,0 +1,51 @@
+:host {
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    display: flex;
+    width: 100%;  /* Allow textarea to fill available space */
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+    font-style: italic;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative; /* To position the refresh button */
+}
+
+.prompt-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#question-prompt {
+  font-size: 18px;
+  margin: 0;
+}
+
+.image-container {
+  position: relative; /* To position the refresh button */
+  margin-bottom: 10px;
+}
+
+#inspiring-image {
+  width: 100%;
+  height: auto;
+  border: 2px solid #444;
+}
+
+.prompt-button {
+  position: absolute;
+  top: 10px;
+  right: 60px;
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+}

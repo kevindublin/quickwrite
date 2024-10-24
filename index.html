@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quick Write</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css" />
+  <link rel="stylesheet" href="static/css/style.css" type="text/css">
+  <link rel="stylesheet" href="static/css/animate.css" type="text/css"/>
+  <meta name="description" content="This is a static web app designed to break writer's block in 6 minutes with Living Room SF's lateral drafting strategy developed by Kevin Dublin">
+
+  <meta property="og:title" content="Quick Write">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="https://promptme.net/">
+  <meta property="og:image" content="static/img/android-chrome-512x512.png">
+  <meta property="og:image:alt" content="static/img/apple-touch-icon.png">
+
+  <link rel="icon" href="static/img/favicon.ico" sizes="any">
+  <link rel="icon" href="static/img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="static/img/apple-touch-icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+	<!-- Defining Page Components using Modulo -->
+	
+    <header>
+        <div class="logo">
+            <h1>Quick Write</h1> 
+        </div>
+    </header>
+
+    <main>
+        <div class="left-column">
+        	<x-DraftArea></x-DraftArea>
+        	<x-DailyRead></x-DailyRead>
+        </div>
+
+        <div class="right-column">
+        	<x-ModeSwitch></x-ModeSwitch>
+            <div class="prompt-area">
+            	<x-PromptArea></x-PromptArea>
+            </div>
+			<x-DripStation></x-DripStation>
+        </div>
+    </main>
+
+    <footer>  
+        <div class="footer-buttons">
+        	<x-DraftControls></x-DraftControls>   
+        </div>
+    </footer>
+
+	<div id="modal" class="modal">
+		<div class="modal-background"></div>
+		<div class="modal-card">
+		  <header class="modal-card-head">
+			<button class="delete" aria-label="close" onclick="closeModal(modal)"></button>
+		  </header>
+		  <section class="modal-card-body">
+			<p id="modal-message"></p>
+		  </section>
+		  <footer class="modal-card-foot">
+			<div class="buttons">
+			  <button class="button is-danger" onclick="clearDraft()">Confirm</button>
+			  <button class="button" onclick="closeModal(modal)">Cancel</button>
+			</div>
+		  </footer>
+		</div>
+	  </div>
+	<!-- <script Modulo src="static/js/Modulo.js"></script>> -->
+	<script Modulo
+    	src="https://unpkg.com/mdu.js"
+    	-src="./static/index.html"
+></script>
+	<script src="static/js/app.js"></script>
+  	<script src="static/js/nicEdit/nicEdit.js" type="text/javascript"></script>
+  	<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+  	
+    </body>
+</html>

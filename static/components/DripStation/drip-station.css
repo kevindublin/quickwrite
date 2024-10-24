@@ -1,0 +1,38 @@
+:host {
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.drip-words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+
+.drip-style {
+    font-size: 16pt;
+    font-weight: bold;
+  }
+  
+#WritingTimer {
+	display: flex;
+	font-size: 20px;
+	justify-content: flex-end;
+	gap: 10px;
+}
+
+#TimerControls {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}
