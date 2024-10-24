@@ -1,7 +1,6 @@
-{% if state.visible %}
+{% if state.draft_visible %}
 				<div class="draft-area">
-    				<textarea id="draftAreaContainer" placeholder="Click the 'Write' button in the top right corner to begin." [state.bind] name="quickwrite" 
-						onkeyup=writeWords() onkeydown=countWords()></textarea>
-					<div id="wordCount" class="word-count">Word Count: 0</div>
+    				<textarea id="draftAreaContainer" placeholder="Click the 'Write' button in the top right corner to begin." [state.bind] name="draft_quickwrite"></textarea>
+					<div id="wordCount" class="word-count" @keyup:=script.countWords>Word Count: {{ state.draft_quickwrite|length }}</div>
 				</div>
 {% endif %}

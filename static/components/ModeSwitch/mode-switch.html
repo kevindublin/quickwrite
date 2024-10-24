@@ -1,11 +1,19 @@
 <div class="controls">
-    <button id="readModeButton" class="read-button" onclick="switchMode()">
+    {% if state.mode_writemode %}
+    <button id="readModeButton" class="read-button"  @click:=script.switchMode>
+    {% else %}
+    <button id="readModeButton" class="read-button is-active"  @click:=script.switchMode>
+    {% endif %}
         <!-- arrows-rotate icon by Free Icons (https://free-icons.github.io/free-icons/) -->
         <svg xmlns="http://www.w3.org/2000/svg" height="2em" fill="currentColor" viewBox="0 0 512 512">
             <path d="M 304 32 L 304 408 L 304 32 L 304 408 L 96 368 L 96 368 L 96 0 L 96 0 L 304 32 L 304 32 Z M 64 400 L 320 451 L 64 400 L 320 451 L 576 400 L 576 400 L 576 29 L 576 29 L 640 16 L 640 16 L 640 448 L 640 448 L 320 512 L 320 512 L 0 448 L 0 448 L 0 16 L 0 16 L 64 29 L 64 29 L 64 400 L 64 400 Z M 336 408 L 336 32 L 336 408 L 336 32 L 544 0 L 544 0 L 544 368 L 544 368 L 336 408 L 336 408 Z" />
         </svg>
     </button>
-    <button id="writeModeButton" class="prompt-button" onclick="switchMode()">
+    {% if state.mode_writemode %}
+    <button id="writeModeButton" class="prompt-button is-active" @click:=script.switchMode>
+    {% else %}
+    <button id="writeModeButton" class="prompt-button" @click:=script.switchMode>
+    {% endif %}
         <!-- arrows-rotate icon by Free Icons (https://free-icons.github.io/free-icons/) -->
         <svg xmlns="http://www.w3.org/2000/svg" height="2em" fill="currentColor" viewBox="0 0 512 512">
         <path d="M 144 272 L 128 384 L 144 272 L 128 384 L 240 368 L 240 368 L 437 171 L 437 171 L 341 75 L 341 75 L 144 272 L 144 272 Z M 512 96 L 416 0 L 512 96 L 416 0 L 363 53 L 363 53 L 459 149 L 459 149 L 512 96 L 512 96 Z M 32 64 L 0 64 L 32 64 L 0 64 L 0 96 L 0 96 L 0 480 L 0 480 L 0 512 L 0 512 L 32 512 L 448 512 L 448 480 L 448 480 L 448 320 L 448 320 L 448 288 L 448 288 L 384 288 L 384 288 L 384 320 L 384 320 L 384 448 L 384 448 L 64 448 L 64 448 L 64 128 L 64 128 L 192 128 L 224 128 L 224 64 L 224 64 L 192 64 L 32 64 Z" />

@@ -72,6 +72,14 @@ footer {
     font-weight: bold;
 }
 
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: flex;
+}
+
 .read-button {
     position: absolute;
     top: 10px;

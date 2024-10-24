@@ -1,4 +1,7 @@
 // Description: This file contains the DripStation component which is responsible for the WordDrip, Timer, and Timer Control features
+const session = modulo.stores.session.data;
+
+
 
 function randInt() {
     let max = 100;

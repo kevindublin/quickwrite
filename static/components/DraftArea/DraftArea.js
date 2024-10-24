@@ -1,26 +1,11 @@
-const draftAreaContainer = document.getElementById('draftAreaContainer');
-const wordCountDisplay = document.getElementById('wordCounter');
-// const Draft = modulo.stores.Draft.data;
+const session = modulo.stores.session.data;
 
-console.log("DraftArea.js loaded");
+console.log("DraftArea.js loaded", session);
 
 
 // Word count functionality
 
 function countWords() { 
-	const draftAreaContainer = document.getElementById('draftAreaContainer');
-	const wordCountDisplay = document.getElementById('wordCount');
-    let wordCount = draftAreaContainer.value.trim().split(/\s+/).length;
-	wordCountDisplay.innerHTML = `Word Count: ${wordCount}`;
-	console.log(wordCount);
+	console.log("countWords() called");
+	session.draft_count = session.draft_quickwrite.trim().split(/\s+/).length;
 }
-
-// Force textArea to store text in state :'(
-
-function writeWords() {
-    const draftAreaContainer = document.getElementById('draftAreaContainer');
-	const Draft = draftAreaContainer.value;
-	console.log(Draft);
-}
-
-// Draft Area Functionality

@@ -6,9 +6,18 @@
     -src="./components/ModeSwitch/mode-switch.html"
     ></Template>
     <State
-        -store="Mode"
-            writemode:=false>
-    </State>
+        -store="session"
+            mode_writemode:=true
+			draft_quickwrite=""
+			draft_count:=0
+			draft_active:=false
+			draft_visible:=true
+            read_vid="BnH1vfIZx6c"
+            read_title="city scat"
+            read_author="devorah major"
+            read_bio_url="https://www.devorahmajor.com/?page_id=4"
+            read_visible:=false
+    ></State>
     <Script
         -src="./components/ModeSwitch/ModeSwitch.js">
     </Script>
@@ -23,11 +32,7 @@
         -src="./components/DraftArea/draft-area.html"
     ></Template>
     <State
-        -store="Draft"
-				quickwrite=""
-				count:=0
-				active:=false
-				visible:=true
+        -store="session"
     ></State>
     <Script
         -src="./components/DraftArea/DraftArea.js">
@@ -43,12 +48,7 @@
         -src="./components/DailyRead/daily-read.html">
     </Template>
     <State
-        -store="DailyRead"
-            vid="BnH1vfIZx6c"
-            title="city scat"
-            author="devorah major"
-            bio_url="https://www.devorahmajor.com/?page_id=4"
-            visible:=false
+        -store="session"
     ></State>
     <Style
         -src="./components/DailyRead/daily-read.css"
@@ -66,6 +66,7 @@
     </Template>
     <State
         -store="Prompts"
+        -name="prompt_area"
             phrase="When was the last time you cried?"
             image="./img/placeholer.jpg"
             visible:=true
@@ -84,7 +85,8 @@
         -src="./components/DripStation/drip-station.html">
     </Template>
     <State
-        -store="DripStation"
+        -store="Drips"
+        -name="drip_station"
             word1=""
             word2=""
             word3=""
@@ -110,6 +112,11 @@
     <Style
         -src="./components/DraftControls/draft-controls.css">
     </Style>
+    <State
+        -store="DraftControls"
+        -name="draft_controls"
+            visible:=true
+            ></State>
     <Script
         -src="./components/DraftControls/DraftControls.js">
     </Script>
